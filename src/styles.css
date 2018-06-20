@@ -1,0 +1,94 @@
+.title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100px;
+  color: blue;
+}
+.timer {
+  margin:100px 0px 0px 0px;
+}
+.left {
+  text-align: left;
+}
+body {
+  margin: 100px 0px 100px 0px;
+  background-color: rgba(150, 150, 150, .6);
+  font-family: sans-serif;
+}
+ 
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: lime;
+  border-radius: 3px;
+}
+
+.option-card {
+  height: 50px;
+  background-color: rgba(240, 240, 240, 1.0);
+  border: 1px solid;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.5);
+  color: rgba(20, 20, 20, 1.0);
+}
+
+.option-card:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+.option-card:active {
+  text-decoration: none;
+  box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.5);
+  color: rgba(20, 20, 20, 1.0);
+}
+
+.question-panel {
+  font-size: 1.5rem;
+  color: crimson;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.question-panel.message {
+  color: blue;
+}
+
+.status-display {
+  margin-top: 52px;
+  font-weight: 900;
+}
+
+.hyperlink-button {
+  text-align: center;
+}
+
+.hyperlink-button a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid;
+  color: #000;
+  margin: 10px 0 15px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.hyperlink-button a:hover {
+  color: #fff;
+}
+
+.hyperlink-button a:active {
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
+}
+
