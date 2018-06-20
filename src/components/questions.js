@@ -57,14 +57,14 @@ class GameBoard extends React.Component {
       activeGame: true,
       questionsAnswer: [
         { // 1
-          question: 'What is 8 x 1 ?',
-          options: [ 2, 7, 8, 9],
-          answer: 8
+          question: 'what is the correct way to initialize the state of an object ?',
+          options: ["this.state = ", "this.setState = ", "this.setState() ", "this.state() "],
+          answer: "this.state = "
         },
         { // 2
-          question: 'What is 3 + 4 ?',
-          options: [ 5, 7, 9, 34],
-          answer: 7
+          question: 'what is the correct way to update the state of an object ?',
+          options: [ "this.state = ", "this.setState = ...", "this.setState({...}) ", "this.state() "],
+          answer: "this.setState({...}) "
         },
         { // 3
           question: 'What is 10 - 6 ?',
@@ -72,24 +72,24 @@ class GameBoard extends React.Component {
           answer: 4
         },
         { // 4
-          question: 'What is 12 / 3 ?',
-          options: [ 4, 6, 3, 8],
-          answer: 4
+          question: 'What is 12 % 3 ?',
+          options: [ 4, 1, 0, 8],
+          answer: 0
         },
         { // 5
-          question: 'What is 11 + 0 ?',
-          options: [ 15, 11, 12, 10],
-          answer: 11
+          question: 'What comes down and never goes up ?',
+          options: [ "taxes", "stars", "wind", "rain"],
+          answer: "rain"
         },
         { // 6
-          question: 'What is 13 + 2 ?',
-          options: [ 4, 17, 9, 15],
-          answer: 15
+          question: 'what motivates you?',
+          options: [ "hard work", "results", "failure", "money"],
+          answer: "failure"
         },
         { // 7
-          question: 'What is 33 / 11 ?',
-          options: [ 2, 3, 4, 1],
-          answer: 3
+          question: 'React is way more efficient at manipulating the DOM?',
+          options: [ "cannot be determined", "false", "nope", "true"],
+          answer: "true"
         },
         { // 8
           question: 'What is 2 + 5 ?',
@@ -97,14 +97,14 @@ class GameBoard extends React.Component {
           answer: 7
         },
         { // 9
-          question: 'What is 9 - 4 ?',
-          options: [ 5, 7, 6, 9],
-          answer: 5
+          question: 'The root of all evil is ',
+          options: [ "money", 'humans', "lack of money", 'love'],
+          answer: "lack of money"
         },
         { // 10
-          question: 'What is 11 * 2 ?',
-          options: [ 20, 22, 33, 34],
-          answer: 22
+          question: 'What are the three common states of water',
+          options: [ "solid, liquid, gas", "carbon, graphite, meta-state", "solid, condensed matter, crystaline", "plasma, liquid, gas"],
+          answer: "solid, liquid, gas"
         }
       ]
     };
