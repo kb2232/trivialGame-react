@@ -34,7 +34,8 @@ class Option extends React.Component
   }
 }
 
-class StatusDisplay extends React.Component {
+class StatusDisplay extends React.Component 
+{
   render() {
     return (<div className="status-display text-center">
                   <p>Correct: { this.props.correct }</p>
@@ -43,10 +44,16 @@ class StatusDisplay extends React.Component {
   }
 }
 
-class GameBoard extends React.Component {
-  constructor(props) {
+class GameBoard extends React.Component 
+{
+  constructor(props) 
+  {
     super(props); 
-    
+    //below - using bind to send "this" - initial state parameters to
+    //processGuess and resetGame
+    // this.processGuess = this.processGuess.bind(this);
+    // this.resetGame = this.resetGame.bind(this);
+
     this.processGuess = this.processGuess.bind(this);
     this.resetGame = this.resetGame.bind(this);
     
@@ -57,14 +64,14 @@ class GameBoard extends React.Component {
       activeGame: true,
       questionsAnswer: [
         { // 1
-          question: 'what is the correct way to initialize the state of an object ?',
-          options: ["this.state = ", "this.setState = ", "this.setState() ", "this.state() "],
-          answer: "this.state = "
+          question: 'what is the correct way to initialize the state of an object? 1. this.state = ; 2. this.setState = ; 3. this.setState(); 4. this.state();  ',
+          options: [1,2,3,4],
+          answer: 1
         },
         { // 2
-          question: 'what is the correct way to update the state of an object ?',
-          options: [ "this.state = ", "this.setState = ...", "this.setState({...}) ", "this.state() "],
-          answer: "this.setState({...}) "
+          question: 'what is the correct way to update the state of an object ? 1. this.state =  2. this.setState = ... 3. this.setState({...}) 4. this.state() ',
+          options: [ 1,2,3,4],
+          answer: 3
         },
         { // 3
           question: 'What is 10 - 6 ?',
@@ -77,19 +84,19 @@ class GameBoard extends React.Component {
           answer: 0
         },
         { // 5
-          question: 'What comes down and never goes up ?',
-          options: [ "taxes", "stars", "wind", "rain"],
-          answer: "rain"
+          question: 'What comes down and never goes up ? 1. taxes, 2. stars, 3. wind, 4. rain',
+          options: [ 1,2,3,4],
+          answer: 4
         },
         { // 6
-          question: 'what motivates you?',
-          options: [ "hard work", "results", "failure", "money"],
-          answer: "failure"
+          question: 'what motivates you? 1. "hard work", 2. "results", 3. "failure", 4. "money"',
+          options: [ 1,2,3,4],
+          answer: 3
         },
         { // 7
-          question: 'React is way more efficient at manipulating the DOM?',
-          options: [ "cannot be determined", "false", "nope", "true"],
-          answer: "true"
+          question: 'React is way more efficient at manipulating the DOM? 1. "cannot be determined", 2. "false", 3. "nope", 4. "true"',
+          options: [ 1,2,3,4],
+          answer: 4
         },
         { // 8
           question: 'What is 2 + 5 ?',
@@ -119,11 +126,12 @@ class GameBoard extends React.Component {
     });
   }
   
-  processGuess(e) { 
+  processGuess(e) 
+  { 
     
-   if (this.state.currentIndex + 1 === this.state.questionsAnswer.length) { 
+   if (this.state.currentIndex + 1 === this.state.questionsAnswer.length) 
+   { 
        this.setState( { activeGame: false } );
-     
        return;
    }
    // For accomplishing a better readible equality-check.
@@ -142,19 +150,16 @@ class GameBoard extends React.Component {
    this.setState( {currentIndex: this.state.currentIndex + 1} );
   }
   
-  render() {
+  render() 
+  {
     var options = [];
     
-    if (this.state.activeGame) {
-      for (let i = 0; i < this.state
-                              .questionsAnswer[0]
-                              .options
-                              .length; i++) {
+    if (this.state.activeGame) 
+    {
+      for (let i = 0; i < this.state.questionsAnswer[0].options.length; i++) 
+      {
         options.push( <Option optionValue={
-                this
-                  .state
-                  .questionsAnswer[this.state.currentIndex]
-                  .options[i] }
+                this.state.questionsAnswer[this.state.currentIndex].options[i] }
               triggerProcess = { this.processGuess } 
               activeGame = { this.state.activeGame } /> );
       }

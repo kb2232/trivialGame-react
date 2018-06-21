@@ -4,8 +4,10 @@ import Timer from './components/timer';
 import './styles.css';
 import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
-class Game extends React.Component {
-	constructor(props) {
+class Game extends React.Component 
+{
+	constructor(props) 
+	{
 		super(props);
 		this.state = {
 			title: 'Totally Trivial Trivia!!',
@@ -13,7 +15,7 @@ class Game extends React.Component {
       isToggle: true,
 		};
 	}
-  
+  //this is to handle click events
   handleClick() {
     this.setState({
       isToggleOn: !this.state.isToggleOn,
